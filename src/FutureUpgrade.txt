@@ -1,0 +1,11 @@
+
+
+1. UI Design: Change the Design by 30%. Add Animations and Light/Dark Mode and add responsiveness.
+
+2. Add Gemini API: Integrate AI features into the project. Add Gemini API into it.
+
+3. Email JS: Become a hiring partner of US.
+
+4. Performance and Accessiblity: Add Very strong level of web accessbility and performance optimizations in the app absolutely by yourself
+
+5. 

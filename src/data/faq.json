@@ -1,0 +1,130 @@
+[
+  {
+    "question": "What is Hirrd?",
+    "answer": "Hirrd is a Job Portal Application that allows companies to post job listings and users to search and apply for jobs. It provides features for both job seekers and employers, with user-friendly interfaces and secure authentication."
+  },
+  {
+    "question": "How do I post a job?",
+    "answer": "As an employer, you can post a job by navigating to the 'Post Job' section after logging in. Fill in the job details and submit the form to create a new job listing."
+  },
+  {
+    "question": "How can I search for jobs?",
+    "answer": "Job seekers can search for jobs by keywords, location, category, and other filters using the search bar on the homepage or the dedicated job search page."
+  },
+  {
+    "question": "How do I apply for a job?",
+    "answer": "To apply for a job, click on the job listing and follow the application instructions provided. You may need to upload your resume and provide additional information."
+  },
+  {
+    "question": "Can I save jobs to apply later?",
+    "answer": "Yes, you can save job listings by clicking the 'Save Job' button on the job listing. Saved jobs can be accessed from your profile under the 'Saved Jobs' section."
+  },
+  {
+    "question": "How do I track my job applications?",
+    "answer": "Job seekers can track the status of their applications from the 'Applications' section in their profile. This section provides updates on the progress of each application."
+  },
+  {
+    "question": "How do I create an account?",
+    "answer": "Click 'Sign Up' and choose 'Job Seeker'. Provide your email, password, and basic details to register."
+  },
+  {
+    "question": "Can I upload multiple resumes?",
+    "answer": "Yes! Navigate to your profile's 'Documents' section to upload/store multiple resumes/CVs."
+  },
+  {
+    "question": "How do I set up job alerts?",
+    "answer": "Use the 'Create Alert' option after searching. Receive email notifications when matching jobs are posted."
+  },
+  {
+    "question": "What if I forget my password?",
+    "answer": "Click 'Forgot Password' on the login page. A reset link will be sent to your registered email."
+  },
+  {
+    "question": "How do I delete my account?",
+    "answer": "Go to Account Settings > Delete Account. Note: This action is irreversible."
+  },
+  {
+    "question": "Can I edit my submitted application?",
+    "answer": "No, once submitted, applications cannot be edited. Contact the employer directly for changes."
+  },
+  {
+    "question": "Are remote jobs available?",
+    "answer": "Yes! Use the 'Remote' filter in job search or select 'Work From Home' in location preferences."
+  },
+  {
+    "question": "How do I report a suspicious job listing?",
+    "answer": "Click the 'Report' button on the job details page. Our team will review it within 24 hours."
+  },
+  {
+    "question": "Do you offer interview preparation resources?",
+    "answer": "Yes! Visit the 'Career Resources' section for guides, templates, and tips."
+  },
+  {
+    "question": "How do I hide my profile from employers?",
+    "answer": "Enable 'Private Mode' in Profile Settings. Employers won't see your profile in searches."
+  },
+  {
+    "question": "How do employers register?",
+    "answer": "Click 'Employer Sign Up', verify your company email, and complete the organization profile."
+  },
+  {
+    "question": "Is there a fee to post jobs?",
+    "answer": "Basic listings are free. Premium posts with enhanced visibility start at $XX/month."
+  },
+  {
+    "question": "Can I edit a published job listing?",
+    "answer": "Yes! Go to 'Manage Jobs' in your dashboard and click 'Edit' on any active listing."
+  },
+  {
+    "question": "How do I view applicant details?",
+    "answer": "Access the 'Applications' tab in your employer dashboard. Click any candidate to see their full profile."
+  },
+  {
+    "question": "Can I extend application deadlines?",
+    "answer": "Yes. Edit the job listing and update the 'Apply By' date before the original deadline expires."
+  },
+  {
+    "question": "How do I contact applicants?",
+    "answer": "Use the built-in messaging system in the Applications section to communicate securely."
+  },
+  {
+    "question": "What file formats can candidates upload?",
+    "answer": "We support PDF, DOCX, and TXT files (max 5MB size)."
+  },
+  {
+    "question": "Which browsers are supported?",
+    "answer": "Chrome, Firefox, Safari, and Edge (latest versions). Enable JavaScript for optimal performance."
+  },
+  {
+    "question": "Is there a mobile app?",
+    "answer": "Not yet, but our website is fully mobile-responsive. App development is planned for 2024."
+  },
+  {
+    "question": "How is my data protected?",
+    "answer": "We use SSL encryption, regular security audits, and comply with GDPR regulations."
+  },
+  {
+    "question": "Why am I not receiving emails?",
+    "answer": "Check spam/junk folders. Whitelist @hirrd.com in your email client. Contact support if issues persist."
+  },
+  {
+    "question": "Can I disable notifications?",
+    "answer": "Yes. Customize email/SMS alerts in Notification Preferences under Account Settings."
+  },
+  {
+    "question": "How do I change my email address?",
+    "answer": "Go to Profile > Contact Information. A verification link will be sent to your new email."
+  },
+  {
+    "question": "Are there accessibility features?",
+    "answer": "Yes! Enable screen reader mode and high-contrast theme in Accessibility Settings."
+  },
+  {
+    "question": "How do I subscribe to newsletters?",
+    "answer": "Opt-in during registration or manage preferences in Account Settings > Communications."
+  },
+  {
+    "question": "Can I switch between job seeker/employer accounts?",
+    "answer": "Yes! Use the 'Switch Role' dropdown in your profile (requires separate verification for employer features)."
+  }
+]
