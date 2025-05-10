@@ -108,6 +108,7 @@ useEffect(()=>{
   }
 
   return (
+    <>
     <div className="">
       <h1 className="gradient-title font-extrabold text-5xl sm:text-7xl text-center pb-8">
         Post a Job
@@ -210,6 +211,7 @@ useEffect(()=>{
         </Button>
       </form>
     </div>
+    </>
   );
 };
 

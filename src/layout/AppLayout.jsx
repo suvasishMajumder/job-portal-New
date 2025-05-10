@@ -5,6 +5,7 @@ import '../App.css'
 
 const AppLayout = () => {
   return (
+    <>
     <div className="">
 
       <div className="grid-background"></div>
@@ -17,6 +18,7 @@ const AppLayout = () => {
         Made by Suvasish Majumder with ❤
       </div>
     </div>
+    </>
   );
 };
 

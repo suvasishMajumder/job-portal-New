@@ -84,19 +84,3 @@ const App = () => {
 }
 
 export default App;
-
-/**
- * The <ProtectedRoute> component acts as a wrapper to protect specific routes. Here's how it works:
-
-Wrapped Component: When you wrap a route's element (e.g., <Onboarding />) with <ProtectedRoute>, 
-the children prop of <ProtectedRoute> becomes the wrapped component.
-
-Authentication Check: Inside <ProtectedRoute>, it checks if the user is authenticated (isSignedIn) and the
- authentication state is loaded (isLoaded).
-
-Redirect if Not Signed In: If the user is not signed in (!isSignedIn), it redirects them to the sign-in page 
-using <Navigate to='/?sign-in=true' />.
-
-Render Protected Content: If the user is signed in, it renders the children (the wrapped component, e.g., <Onboarding />).
- * 
- */

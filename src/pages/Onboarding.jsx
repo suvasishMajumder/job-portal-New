@@ -30,22 +30,12 @@ await user
 }
 
 
-
-// useEffect(() => {
-//   if (user?.unsafeMetadata?.role) {
-//     // navigate(user.unsafeMetadata.role === 'Candidate' ? '/jobs' : '/post-job');
-
-//     user?.unsafeMetadata.role && isLoaded === 'Candidate' ? navigate('/jobs') : navigate('/post-job');
-
-//   }
-// }, [user]);
-
-
 if(!isLoaded){
   return <RiseLoader className='mb-4 text-center' width={'100%'} color='#36d7b7'/>
 }
 
   return (
+    <>
     <div>
     <h2 className='gradient-title text-center font-extrabold text-7xl
     sm:text-8xl tracking-tighter'>I am a...</h2>
@@ -58,6 +48,7 @@ if(!isLoaded){
 </div>
 
     </div>
+    </>
   )
 }
 

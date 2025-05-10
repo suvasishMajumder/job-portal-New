@@ -15,6 +15,7 @@ console.log(faqs);
 
 
   return (
+    <>
     <main className='flex flex-col gap-10 sm:gap-20 py-10 sm:py-20'>
   <section className='text-center'>
 
@@ -126,6 +127,7 @@ return (
 
 
     </main>
+    </>
   )
 }
 

@@ -14,6 +14,7 @@ const MyJobs = () => {
   }
 
   return (
+    <>
     <div>
       <h1
         className="gradient-title font-extrabold
@@ -34,6 +35,7 @@ const MyJobs = () => {
 )}
 
     </div>
+    </>
   );
 };
 

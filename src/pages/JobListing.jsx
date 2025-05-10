@@ -40,17 +40,8 @@ const [company_id , setCompany_id] = useState('');
   }
 
 
-//New Code
 
-
-/*Here , we are passing (getJobs,{ location, company_id, searchQuery }) to the useFetch custom hook and we are destructuring fn,data,loading 
-from its return value*/
 const {fn:fnJobs, data:dataJobs, loading:loadingJobs, } = useFetch(getJobs,{ location, company_id, searchQuery });
-
-//loadingJobs default value = null; dataJobs default value = 0;
-/*When you call fnJobs() in your useEffect, the first thing it does is setLoading(true). That updates the loading value 
-inside the hook, which you’ve aliased as loadingJobs. React then re‑renders your component 
-with loadingJobs === true, so your <RiseLoader/> spinner shows until the fetch resolves (and setLoading(false) runs).  */
 
 console.log(loadingJobs);
 
@@ -103,12 +94,13 @@ if(!isLoaded){
 
 
   return (
+     <>
     <div className="select-none">
     <h1 className='gradient-title font-extrabold text-6xl sm:text-7xl text-center pb-8'>
 Latest Jobs
     </h1>
 
-{/* Add Filters Here */}
+{/* I will Add Filters Here */}
 
 <form onSubmit={(event) => handleSearch(event)} className='h-14 flex w-full gap-2 items-center mb-3'>
 
@@ -201,6 +193,7 @@ savedInit={job?.saved?.length>0} />
 
 
     </div>
+   </>
   )
 
 }

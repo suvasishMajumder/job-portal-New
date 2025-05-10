@@ -14,21 +14,6 @@ const JobPage = () => {
 
 const {user , isLoaded} = useUser();
 
-/*
-The useParams hook in React Router returns an object of key-value pairs,
- where the keys are the dynamic route parameters defined in the route path, 
- and the values are the actual values from the URL.
-
-Example: { id: "123" }
-
-Another example:
-
-For a route like /profile/:username and a URL /profile/johndoe, 
-useParams() will return:
-
-{ username: "johndoe" }
-
-*/
 
 
 const {id} = useParams();
@@ -88,6 +73,7 @@ console.log(user)
 
 
   return (
+    <>
    <div className='flex flex-col gap-8 mt-5'>
     <div className='flex flex-col-reverse gap-6 md:flex-row justify-between items-center'>
 <h1 className="gradient-title font-extrabold pb-3 text-4xl sm:text-6xl">{job?.title}</h1>
@@ -204,6 +190,7 @@ return (
 
 
    </div>
+   </>
   )
 }
 
