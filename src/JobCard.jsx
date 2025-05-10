@@ -15,8 +15,9 @@ import { GridLoader } from "react-spinners";
 const JobCard = ({job,isMyJob = false, savedInit = false, onJobSaved = () => {}, }) => {
 
   const { user , isLoaded } = useUser();
+  console.log(user)
 
-const [saved , setSaved] = useState(savedInit)
+const [saved , setSaved] = useState(savedInit);
   
 const handleSavedJob = async() =>{
 
@@ -27,7 +28,7 @@ const handleSavedJob = async() =>{
   job_id:job.id,
   
   });
-  
+   
 onJobSaved();
 
   };
@@ -70,10 +71,10 @@ useEffect(()=>{
 
 
   return (
-    <Card className={'flex flex-col'}>
+    <Card className={'flex flex-col '}>
       {loadingDeleteJob && (<GridLoader className='mt-4' width='100%' color='#36d7b7' />)}
       <CardHeader>
-        <CardTitle>
+        <CardTitle className={'flex justify-between'}>
           {job.title}
 
           {isMyJob && (
@@ -110,7 +111,7 @@ useEffect(()=>{
 
 
 
-{!isMyJob && <Button variant='outline' 
+{!isMyJob && <Button variant='destructive' 
 onClick={handleSavedJob} 
 disabled={loadingSavedJob}
 className='w-15'>
@@ -121,8 +122,6 @@ className='w-15'>
 
   
   </Button>}
-
-
 
 
 
@@ -184,5 +183,35 @@ So after that line:
 
 (error is also available on the return object if you ever want to destructure it.)
 
+
+*/
+
+
+
+
+
+//Doubt 2:
+
+
+
+/*
+1. Child does its own API call
+When you click “Save” or “Delete” in JobCard, that component’s useFetch(saveJob) or useFetch(deleteJob) hook runs the Supabase 
+API call to update the database.
+
+
+2. Child calls onJobSaved() afterward
+Right after the API call resolves, JobCard invokes the onJobSaved() callback—which, remember, is just fnSavedJobs() from the parent.
+
+
+3. Parent re‑fetches saved jobs
+Because fnSavedJobs() is bound to the parent’s useFetch(getSavedJobs), calling it causes the parent to fetch the latest saved_jobs
+table from Supabase.
+
+
+4. UI reflects the new data
+When the parent’s fetch completes, its data: savedJobs updates. React re‑renders the grid of JobCard components with whatever
+the current server state 
+is—so newly saved jobs show up, and newly deleted ones disappear.
 
 */

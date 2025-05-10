@@ -77,6 +77,8 @@ fetchCompanies();
 
 
   return (
+
+    <>
     <Drawer>
       <DrawerTrigger>
         <Button type="button" size="sm" variant="secondary">
@@ -120,6 +122,7 @@ Add
         </DrawerFooter>
       </DrawerContent>
     </Drawer>
+    </>
   );
 };
 

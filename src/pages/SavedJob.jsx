@@ -20,6 +20,8 @@ const { isLoaded } = useUser();
     
     } = useFetch(getSavedJobs)
 
+    console.log(savedJobs)
+
 useEffect(()=>{
 
 fnSavedJobs();

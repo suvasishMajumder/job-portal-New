@@ -84,6 +84,8 @@ Simulates a click on the anchor element, which initiates the download or
   };
 
   return (
+    
+    <>
     <Card>
       {loadingHiringStatus && <BarLoader width={`100%`} color="#36d7b7" />}
       <CardHeader>
@@ -182,6 +184,7 @@ MM/DD/YYYY, HH:MM:SS AM/PM
         )}
       </CardFooter>
     </Card>
+    </>
   );
 };
 

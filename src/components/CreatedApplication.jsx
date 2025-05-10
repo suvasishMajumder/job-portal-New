@@ -37,16 +37,21 @@ const {user, isLoaded} = useUser();
         }
 
   return (
+    <>
     <div className='flex bg-red-700 flex-col gap-3'>
 {applications?.map((application) => {
 
 return (
 
-  <ApplicationCard key={application.id} application={application} isCandidate />
+  <ApplicationCard key={application.id} application={application} isCandidate /> //When we pass prop as isCandidate , 
+  // then its same as isCandidate = {true}
+//Hence , we can use this isCandidate prop in <ApplicationCard /> component to perform conditional rendering
+
 )
 
 })}
     </div>
+    </>
   )
 }
 
