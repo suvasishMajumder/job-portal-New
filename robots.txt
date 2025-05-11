@@ -1,0 +1,16 @@
+# Allow all search engines to crawl the site
+User-agent: *
+Disallow:
+
+# Block specific directories (e.g., API or private files)
+Disallow: /src/pages/api/
+Disallow: /node_modules/
+
+# Disallow the .env file
+Disallow: /.env
+
+# Allow specific files or directories
+Allow: /src/assets/
+
+# Sitemap location (if you have one)
+Sitemap: https://www.example.com/sitemap.xml

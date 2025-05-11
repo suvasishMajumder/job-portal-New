@@ -1,9 +1,9 @@
 import useFetch from '@/hooks/use-fetch'
-import React, { useEffect } from 'react'
+import React, { lazy, useEffect } from 'react'
 import { getSavedJobs } from './api/apiJobs'
 import { useUser } from '@clerk/clerk-react'
 import { BarLoader } from 'react-spinners'
-import JobCard from '@/JobCard'
+const JobCard = lazy(()=>import('@/JobCard'))
 
 
 
@@ -20,7 +20,7 @@ const { isLoaded } = useUser();
     
     } = useFetch(getSavedJobs)
 
-    console.log(savedJobs)
+    // console.log(savedJobs)
 
 useEffect(()=>{
 

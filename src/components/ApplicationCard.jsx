@@ -27,50 +27,7 @@ const ApplicationCard = ({ application, isCandidate = false }) => {
     link.click();
   };
 
-  /*
-  
-  
-1. Create an <a> Element:
 
-document.createElement("a")
-
-This creates a new <a> (anchor) element in the DOM.
-
-
-
-
-2. Set the href Attribute:
-
-link.href = application?.resume;
-
-Sets the href of the anchor element to the URL of the resume file 
-(application?.resume).
-
-
-
-
-3. Set the target Attribute:
-
-link.target = "_blank";
-
-Ensures the file opens in a new tab or triggers a download, depending on
- the browser behavior.
-
-
-4. Trigger the Click Programmatically:
-
-link.click();
-
-Simulates a click on the anchor element, which initiates the download or
- opens the file.
-
- when the `handleDownload` function is called, it programmatically
-  creates a new `<a>` (anchor) tag and simulates a click on it to 
-  initiate the download.
-
-
-
-  */
 
   const { loading: loadingHiringStatus, fn: fnHiringStatus } = useFetch(
     updateApplicationStatus,
@@ -127,37 +84,7 @@ Simulates a click on the anchor element, which initiates the download or
       <CardFooter className={`flex flex-row justify-between`}>
         <span className="">
           {new Date(application?.created_at).toLocaleString()}
-{/* {
 
-{new Date(application?.created_at).toLocaleString()}
-
-
-
-1. How It Works:
----- application?.created_at
-
----- Accesses the created_at property of the application object.
-
----- Expected to be a timestamp (e.g., "2025-05-05T12:34:56Z").
-
-
-2. new Date()
-
----- Converts the timestamp into a JavaScript Date object.
-
-
-3. .toLocaleString()
-
----- Formats the Date object into a locale-specific, human-readable string. ("Locale-specific" means the date and time format adapts to the user's regional settings—like MM/DD/YYYY in the U.S. vs DD/MM/YYYY in Europe.)
-
----- Example output: 5/5/2025, 12:34:56 PM.
-
-
-
-Displays the created_at timestamp in a readable format like:
-
-MM/DD/YYYY, HH:MM:SS AM/PM
-} */}
 
         </span>
         {isCandidate ? (

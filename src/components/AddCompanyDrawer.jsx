@@ -106,9 +106,9 @@ Add
 </Button>
 
 </form>
-{errors.name && <p className="text-red-500">{errors?.name.message}</p>}
-{errors.logo && <p className="text-red-500">{errors?.logo.message}</p>}
-{errorAddCompany?.message && <p className="text-red-500">{errorAddCompany?.message}</p>}
+{errors.name && <p role="alert" className="text-red-500">{errors?.name.message}</p>}
+{errors.logo && <p role="alert" className="text-red-500">{errors?.logo.message}</p>}
+{errorAddCompany?.message && <p role="alert" className="text-red-500">{errorAddCompany?.message}</p>}
 
 {loadingAddCompany && <BarLoader width={'100%'} color="#36d7b7"></BarLoader>}
 

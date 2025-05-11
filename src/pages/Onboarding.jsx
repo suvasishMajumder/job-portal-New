@@ -8,7 +8,7 @@ import { RiseLoader	} from 'react-spinners'
 const Onboarding = () => {
 
 const {user , isLoaded } = useUser();
-console.log(user);
+// console.log(user);
 
 const navigate = useNavigate();
 

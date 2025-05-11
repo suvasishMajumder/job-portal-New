@@ -31,7 +31,7 @@ export async function getJobs(token, { location, company_id, searchQuery }) {
     return null;
   }
 
-  console.log(data);
+  // console.log(data);
 
   return data;
 }
@@ -45,7 +45,7 @@ export async function saveJob(token, { alreadySaved }, saveData) {
       .delete()
       .eq("job_id", saveData.job_id);
 
-    console.log("value:", data);
+    // console.log("value:", data);
 
     if (deleteError) {
       console.error("Error removing saved job:", deleteError);
@@ -111,7 +111,7 @@ export async function updateHiringStatus(token, { job_id }, isOpen) {
     return null;
   }
 
-  console.log(data);
+  // console.log(data);
 
   return data;
 }

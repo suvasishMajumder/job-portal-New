@@ -1,6 +1,7 @@
 import { addNewCompany, getCompanies } from "./api/apiCompanies";
 import { addNewJob } from "./api/apiJobs";
-import AddCompanyDrawer from "../components/AddCompanyDrawer";
+// const AddCompanyDrawer = lazy(()=>import("../components/AddCompanyDrawer"));
+import AddCompanyDrawer from "@/components/AddCompanyDrawer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Controller } from "react-hook-form";
@@ -18,11 +19,14 @@ import { useUser } from "@clerk/clerk-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import MDEditor from "@uiw/react-md-editor";
 import { State } from "country-state-city";
-import { useEffect } from "react";
+import { lazy, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Navigate, useNavigate } from "react-router-dom";
 import { BarLoader } from "react-spinners";
 import { z } from "zod";
+
+
+
 
 
 
@@ -55,7 +59,7 @@ const PostJob = () => {
   } = useFetch(getCompanies);
 
   useEffect(() => {
-    console.log("Fetching companies....");
+    // console.log("Fetching companies....");
 
     if (isLoaded) {
       fnCompanies();
@@ -63,7 +67,7 @@ const PostJob = () => {
   }, [isLoaded]);
 
 
-console.log(companies)
+// console.log(companies)
 
   const {
 
@@ -116,11 +120,11 @@ useEffect(()=>{
 
       <form onSubmit={handleSubmit(onSubmit)} action="" className="flex flex-col gap-4 p-4 pb-0">
         <Input placeholder="Job Title" {...register("title")} />
-        {errors.title && <p className="text-red-500">{errors.title.message}</p>}
+        {errors.title && <p role="alert" className="text-red-500">{errors.title.message}</p>}
 
         <Textarea placeholder="Job Description" {...register("description")} />
         {errors.description && (
-          <p className="text-red-500">{errors.description.message}</p>
+          <p role="alert" className="text-red-500">{errors.description.message}</p>
         )}
 
         <div className="flex gap-5 items-center">
@@ -182,11 +186,11 @@ useEffect(()=>{
         </div>
 
         {errors.location && (
-          <p className="text-red-500">{errors.location.message}</p>
+          <p role="alert" className="text-red-500">{errors.location.message}</p>
         )}
 
         {errors.company_id && (
-          <p className="text-red-500">{errors.company_id.message}</p>
+          <p role="alert" className="text-red-500">{errors.company_id.message}</p>
         )}
 
         <Controller
@@ -198,12 +202,12 @@ useEffect(()=>{
         />
 
         {errors.requirements && (
-          <p className="text-red-500">{errors.requirements.message}</p>
+          <p role="alert" className="text-red-500">{errors.requirements.message}</p>
         )}
 
 
         {errorCreateJob?.message &&
-        <p className="text-red-500">{errorCreateJob?.message}</p>}
+        <p role="alert" className="text-red-500">{errorCreateJob?.message}</p>}
 
 {loadingCreateJob && <BarLoader width={'100%'} color="#36d7b7"/>}
         <Button type="submit" variant="blue" size="lg" className="mt-2">

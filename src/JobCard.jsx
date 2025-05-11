@@ -15,7 +15,7 @@ import { GridLoader } from "react-spinners";
 const JobCard = ({job,isMyJob = false, savedInit = false, onJobSaved = () => {}, }) => {
 
   const { user , isLoaded } = useUser();
-  console.log(user)
+  // console.log(user)
 
 const [saved , setSaved] = useState(savedInit);
   
@@ -92,7 +92,7 @@ useEffect(()=>{
       <CardContent>
         <div className="">
           {job.company && (
-            <img src={job.company.logo_url} className="h-6" alt={job.company_id} />
+            <img src={job.company.logo_url} loading="lazy" className="h-6" alt={job.company_id} />
           )}
 
           <div className="flex gap-2 justify-end items-center">

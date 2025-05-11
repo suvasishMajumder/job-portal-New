@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { lazy, useEffect, useState } from 'react'
 import { getJobs } from './api/apiJobs'
 import { useSession, useUser } from '@clerk/clerk-react'
 import useFetch from '@/hooks/use-fetch'
 import { BarLoader, SyncLoader , RiseLoader } from 'react-spinners'
-import JobCard from '@/JobCard'
+// import JobCard from '@/JobCard'
+const JobCard = lazy(()=>import('@/JobCard'));
 import { getCompanies } from './api/apiCompanies'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
@@ -24,7 +25,7 @@ const [company_id , setCompany_id] = useState('');
 
   const {isLoaded , user} = useUser();
 
-  console.log(user)
+  // console.log(user)
 
 
   const handleSearch = (e) =>{
@@ -43,11 +44,11 @@ const [company_id , setCompany_id] = useState('');
 
 const {fn:fnJobs, data:dataJobs, loading:loadingJobs, } = useFetch(getJobs,{ location, company_id, searchQuery });
 
-console.log(loadingJobs);
+// console.log(loadingJobs);
 
 useEffect(()=>{
 
-  console.log('Fetching jobs....')
+  // console.log('Fetching jobs....')
 
   if(isLoaded){
   fnJobs();
@@ -65,7 +66,7 @@ const {fn:fnCompanies , data:companies ,  } = useFetch(getCompanies,{ location, 
 
 useEffect(()=>{
 
-  console.log('Fetching companies....')
+  // console.log('Fetching companies....')
 
   if(isLoaded){
   fnCompanies();

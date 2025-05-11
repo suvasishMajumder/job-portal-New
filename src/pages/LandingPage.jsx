@@ -11,7 +11,7 @@ import { AccordionContent , AccordionItem , AccordionTrigger , Accordion } from 
 
 const LandingPage = () => {
 
-console.log(faqs);
+// console.log(faqs);
 
 
   return (
@@ -30,7 +30,9 @@ Explore thoussands of job listings or find the perfect candidate</p>
 
   </section>
 
-<div className="flex gap-6 justify-center">
+
+
+<div className="flex flex-col items-center sm:flex-row gap-6 justify-center">
 
 {/* button */}
 
@@ -45,6 +47,8 @@ Explore thoussands of job listings or find the perfect candidate</p>
 
 
 </div>
+
+
 
 {/* carousel  */}
 <Carousel  className='w-full select-none py-10'
@@ -69,7 +73,7 @@ return ( <CarouselItem key={id} className='basis-1/3 lg:basis-1/6'>
 
 {/* banner */}
 {/* D:\WEB DEVELOPMENT PROJECT\React Big Projects\Job Portal\jp\src\assets\ai-boys.png */}
-<img src="/src/assets/ai-boys.png" alt=""  className='w-full' />
+<img src="/src/assets/ai-boys.png" alt="" loading='lazy'  className='w-full' />
 
 <section className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 {/* cards  */}

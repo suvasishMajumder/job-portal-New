@@ -63,7 +63,7 @@ const schema = z.object({
     const { user } = useUser();
   
     const onSubmit = (data) => {
-      console.log(data?.resume);
+      // console.log(data?.resume); //For Debugging
   
       fnApply({
         ...data,
@@ -112,7 +112,7 @@ const schema = z.object({
             className="flex-1"
           />
           {errors.experience && (
-            <p className="text-red-500">{errors.experience.message}</p>
+            <p role="alert" className="text-red-500">{errors.experience.message}</p>
           )}
 
           <Input
@@ -122,7 +122,7 @@ const schema = z.object({
             {...register("skills")}
           />
           {errors.skills && (
-            <p className="text-red-500">{errors.skills.message}</p>
+            <p role="alert" className="text-red-500">{errors.skills.message}</p>
           )}
 
           <Controller
@@ -147,7 +147,7 @@ const schema = z.object({
           />
 
           {errors.education && (
-            <p className="text-red-500">{errors.education.message}</p>
+            <p role="alert" className="text-red-500">{errors.education.message}</p>
           )}
 
           <Input
@@ -157,7 +157,7 @@ const schema = z.object({
             {...register("resume")}
           />
           {errors.resume && (
-            <p className="text-red-500">{errors.resume.message}</p>
+            <p role="alert" className="text-red-500">{errors.resume.message}</p>
           )}
 
           {errorApply?.message && <p className="">{errorApply.message}</p>}

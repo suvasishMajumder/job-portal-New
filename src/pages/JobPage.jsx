@@ -1,14 +1,15 @@
 import useFetch from '@/hooks/use-fetch';
 import { useUser } from '@clerk/clerk-react'
-import React, { useEffect } from 'react'
+import React, { lazy, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import { getSingleJob, updateHiringStatus } from './api/apiJobs';
 import { BarLoader } from 'react-spinners';
 import { Briefcase, DoorClosed, DoorOpen, MapPinIcon } from 'lucide-react';
 import MDEditor from '@uiw/react-md-editor';
 import { Select , SelectTrigger , SelectValue , SelectContent , SelectGroup , SelectItem } from '@/components/ui/select';
-import ApplyJobDrawer from '@/components/ApplyJobDrawer';
-import ApplicationCard from '@/components/ApplicationCard';
+const ApplyJobDrawer = lazy(()=> import('@/components/ApplyJobDrawer'));
+const ApplicationCard = lazy(()=> import('@/components/ApplicationCard'));
+
 
 const JobPage = () => {
 
@@ -69,7 +70,7 @@ if(!isLoaded || loadingJob){
 // console.log(`job?.user?.id:${user?.id}`);
 
 
-console.log(user)
+// console.log(user)
 
 
   return (
@@ -77,7 +78,7 @@ console.log(user)
    <div className='flex flex-col gap-8 mt-5'>
     <div className='flex flex-col-reverse gap-6 md:flex-row justify-between items-center'>
 <h1 className="gradient-title font-extrabold pb-3 text-4xl sm:text-6xl">{job?.title}</h1>
-<img src={job?.company?.logo_url} className='h-12' alt={job?.title} />
+<img loading='lazy' src={job?.company?.logo_url} className='h-12' alt={job?.title} />
     </div>
 
 
